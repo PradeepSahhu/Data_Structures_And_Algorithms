@@ -8,7 +8,7 @@ struct Node
     int data;
     struct Node *next; // Self referencing structure...
 };
-// Always passing head here...
+// Always Pass head here...
 void linkedListTraversal(struct Node *ptr)
 {
 
@@ -43,7 +43,7 @@ struct Node *insertInIndex(struct Node *head, int data, int index)
 //Case - I
 struct Node *inserAtFirst(struct Node *head, int data) // struct Node *ptr: to directly passing node
 {
-    struct Node *ptr = (struct Node *)malloc(sizeof(struct Node));
+    struct Node *ptr = (struct Node *)malloc(sizeof(struct Node)); //Creating a new node: ptr
     ptr->data = data;
     ptr->next = head;
     return ptr; // Returing new head...
@@ -71,7 +71,7 @@ struct Node *insertAfterNode(struct Node *head,struct Node *prevNode, int data)
     ptr->next = prevNode->next;
     prevNode->next = ptr;
 
-    return head;
+    return head; //returning head
     
 
 }
