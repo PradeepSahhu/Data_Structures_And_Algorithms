@@ -32,12 +32,15 @@ struct Node *deleteAtMiddle(struct Node *head, int index)
 {
 
     struct Node *ptr = head;
-    int i = 0;
-    while (i != index - 1)
-    {
+    for(int i = 0;i<index-1;i++){
         ptr = ptr->next;
-        i++;
     }
+    // int i = 0;
+    // while (i != index - 1)
+    // {
+    //     ptr = ptr->next;
+    //     i++;
+    // }
     struct Node *q = ptr->next;
 
     ptr->next = q->next;
@@ -116,14 +119,14 @@ int main()
     // head = deleteAtMiddle(head, 2);
     // linkedListTraversal(head);
 
-    // cout << endl
-    //      << "Running the deleteAtEnd function" << endl;
-    // head = deleteAtEnd(head);
-    // linkedListTraversal(head);
-
     cout << endl
-         << "Running the deleteAfterNode function" << endl;
-    head = deleteAfterNode(head, second);
+         << "Running the deleteAtEnd function" << endl;
+    head = deleteAtEnd(head);
     linkedListTraversal(head);
+
+    // cout << endl
+    //      << "Running the deleteAfterNode function" << endl;
+    // head = deleteAfterNode(head, second);
+    // linkedListTraversal(head);
     return 0;
 }
