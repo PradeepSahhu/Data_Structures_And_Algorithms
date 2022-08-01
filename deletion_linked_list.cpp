@@ -75,7 +75,40 @@ struct Node *deleteAfterNode(struct Node *head, struct Node *givenNode)
     ptr->next = q->next;
     free(q);
     return head;
-}
+};
+
+//Deleting a element with a given value from the linked list.
+struct Node * deleteAtValue(struct Node * head, int value){
+    struct Node * ptr = head;
+    struct Node * q = ptr->next;
+    while(q->data != value && q->next != NULL){
+        q = q->next;
+        ptr = ptr->next;
+    }
+
+    if(q->data == value){
+        ptr->next = q->next;
+        free(q);
+    }
+    
+    return head;
+};
+
+struct Node *makeAllSame(struct Node *head, int value)
+{
+
+    struct Node *ptr = head;
+    
+    while (ptr->next != NULL)
+    {
+        ptr->data = value;
+        ptr = ptr->next;
+        
+    }
+    ptr->data = value;
+
+    return head;
+};
 
 int main()
 {
@@ -119,14 +152,19 @@ int main()
     // head = deleteAtMiddle(head, 2);
     // linkedListTraversal(head);
 
-    cout << endl
-         << "Running the deleteAtEnd function" << endl;
-    head = deleteAtEnd(head);
-    linkedListTraversal(head);
+    // cout << endl
+    //      << "Running the deleteAtEnd function" << endl;
+    // head = deleteAtEnd(head);
+    // linkedListTraversal(head);
 
     // cout << endl
     //      << "Running the deleteAfterNode function" << endl;
     // head = deleteAfterNode(head, second);
     // linkedListTraversal(head);
+
+    cout << endl
+         << "Running the MakeAllOne function" << endl;
+    head = makeAllSame(head, 1);
+    linkedListTraversal(head);
     return 0;
 }
