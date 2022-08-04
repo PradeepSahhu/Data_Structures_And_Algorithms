@@ -49,7 +49,7 @@ int popStack(struct stack *ptr){
 int main(){
 
     struct stack *sp; //Structure pointer
-    sp = (struct stack *) malloc (sizeof(struct stack));
+    sp = (struct stack *) malloc (sizeof(struct stack)); // As it is a structure pointer, it must have dynamic memory. For custom data type = custom memory allocation.
     sp->size = 3;
     sp->top = -1;
     sp->arr = (int *) malloc (sp->size * sizeof(int));
