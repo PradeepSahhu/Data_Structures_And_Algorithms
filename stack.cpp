@@ -27,10 +27,10 @@ int isFull(struct stack *ptr)
     {
         return 1;
     }
-    else{
+    else
+    {
         return 0;
     }
-    
 }
 
 int main()
@@ -41,48 +41,51 @@ int main()
     // s.arr = (int *) malloc (s.size * sizeof(int)); //array dynamic memory allocation.
 
     struct stack *s; // A pointer of stack
-    s = (struct stack *) malloc (sizeof(struct stack));
-    
+    s = (struct stack *)malloc(sizeof(struct stack));
+
     s->size = 6;
-    
+
     s->top = -1;
-    
-    s->arr = (int *) malloc (s->size * sizeof(int)); // array dynamic memory allocation.
-    
-//pushing an Element manually
-    // s->arr[0] = 7;
-    // s->top++;
-    // s->arr[1] = 8;
-    // s->top++;
-    // s->arr[2] = 8;
-    // s->top++;
-    // s->arr[3] = 8;
-    // s->top++;
-    // s->arr[4] = 8;
-    // s->top++;
-    // s->arr[5] = 8;
-    // s->top++;
 
-//Why this is also working?
-    // s->arr[6] = 8;
-    // s->top++;
-    // s->arr[7] = 8;
-    // s->top++;
+    s->arr = (int *)malloc(s->size * sizeof(int)); // array dynamic memory allocation.
 
+    // pushing an Element manually
+    //  s->arr[0] = 7;
+    //  s->top++;
+    //  s->arr[1] = 8;
+    //  s->top++;
+    //  s->arr[2] = 8;
+    //  s->top++;
+    //  s->arr[3] = 8;
+    //  s->top++;
+    //  s->arr[4] = 8;
+    //  s->top++;
+    //  s->arr[5] = 8;
+    //  s->top++;
+
+    // Why this is also working?
+    //  s->arr[6] = 8;
+    //  s->top++;
+    //  s->arr[7] = 8;
+    //  s->top++;
 
     // check if stack is empty.
-    if(isEmpty(s)){
-        cout<<"The stack is Empty "<<endl;
+    if (isEmpty(s))
+    {
+        cout << "The stack is Empty " << endl;
     }
-    else {
-        cout<<"The stack is not Emtpy "<<endl;
+    else
+    {
+        cout << "The stack is not Emtpy " << endl;
     }
 
-    if(isFull(s)){
-        cout<<"Stack is full"<<endl;
+    if (isFull(s))
+    {
+        cout << "Stack is full" << endl;
     }
-    else{
-        cout<<"Stack is not full"<<endl;
+    else
+    {
+        cout << "Stack is not full" << endl;
     }
     return 0;
 }

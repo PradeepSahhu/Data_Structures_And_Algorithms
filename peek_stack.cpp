@@ -88,10 +88,10 @@ int main(){
         printf("The value at position %d is %d \n", j, peek(sp, j));
     }
 
-    // cout<<popStack(sp)<<" is popped out<<endl;
-    // cout<<popStack(sp)<<" is popped out<<endl;
-    // cout<<popStack(sp)<<" is popped out<<endl;
-    // cout<<popStack(sp)<<" is popped out<<endl; // The stack is empty at this point so no other element will be popped out.
+    // cout<<popStack(sp)<<" is popped out"<<endl;
+    // cout<<popStack(sp)<<" is popped out"<<endl;
+    // cout<<popStack(sp)<<" is popped out"<<endl;
+    // cout<<popStack(sp)<<" is popped out"<<endl; // The stack is empty at this point so no other element will be popped out.
 
     // ******************************** checking if the stack is empty and full or not. ********************
     if(isEmpty(sp)){

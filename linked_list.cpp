@@ -29,7 +29,7 @@ int main()
 
     // struct pointer
     // Allocate memory for nodes in the linked list in Heap.
-    head = (struct Node *)malloc(sizeof(struct Node));
+    head = (struct Node *)malloc(sizeof(struct Node)); // we use (data-type *) because malloc(sizeof(struct Node)) returns the void pointer.
     second = (struct Node *)malloc(sizeof(struct Node));
     third = (struct Node *)malloc(sizeof(struct Node));
     fourth = (struct Node *)malloc(sizeof(struct Node));
